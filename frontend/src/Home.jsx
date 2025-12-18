@@ -57,12 +57,12 @@ function Home() {
         {/* api read */}
 
         <div className="l">
-                <input onChange={handleSearch} className="w-80 h-10 border-2 px-3 rounded-xl border-black md:ml-20 ml-6 text-3xl" type="search" placeholder="search data ..." />
+                <input onChange={handleSearch} className="w-80 h-10 border-2 px-3 rounded-xl border-black md:ml-32 ml-6 text-3xl" type="search" placeholder="search data ..." />
 
 
         {
       postData.map((item) => {
-        return <div className="w-80 h-[450px] border-2 border-black rounded-xl p-4 md:ml-40 ml-6 my-20">
+        return <div className="w-80 h-[450px] border-2 shadow-md  rounded-xl p-4 md:ml-40 ml-6 my-20">
           <img className="w-72 h-60 rounded-xl" src={`http://localhost:9000/allImages/${item.pImage}`} alt={item.pImage} />
           <h1 className="text-4xl font-semibold py-3">{item.title}</h1>
           <p className="text-gray-600">{item.description}</p>
