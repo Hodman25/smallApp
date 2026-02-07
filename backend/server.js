@@ -7,9 +7,12 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-mongoose.connect("mongodb+srv://hodmanmaxamed84_db_user:MOA2WROEmGbPfgFy@cluster0.b1jzpop.mongodb.net/?appName=Cluster0").then(() => {
+mongoose.connect("mongodb://localhost:27017/smallApp").then(() => {
     console.log("successs comnected to database")
 })
+// mongoose.connect("mongodb+srv://hodmanmaxamed84_db_user:MOA2WROEmGbPfgFy@cluster0.b1jzpop.mongodb.net/?appName=Cluster0").then(() => {
+//     console.log("successs comnected to database")
+// })
 
 
 app.use(postRouter)
